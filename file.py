@@ -10,6 +10,9 @@ try:
         print("Host: ",host)
         print("Ports: ",ports)
 
-        ans,unans = sr(If)
+        ans,unans = sr(If(dst=host)/TCP(dport=ports,flags="S"),verbose=0 , timeout=2)
+        for (s,r) in ans:
+            print("[+] {} Open".format(s[TCP].dport))
+            
     
     
