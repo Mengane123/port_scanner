@@ -14,5 +14,9 @@ try:
         for (s,r) in ans:
             print("[+] {} Open".format(s[TCP].dport))
             
+
+except(ValueError,TypeError,RuntimeError,NameError):
+    print("[-] some Error Occured")
+    print("[-] existing ")
     
     
